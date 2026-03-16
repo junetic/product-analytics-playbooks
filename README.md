@@ -1,20 +1,22 @@
 # Product Analytics Playbooks
 
-Analytics shows what happened. These playbooks help you figure out why.
+Analytics shows what happened. These playbooks help you investigate why.
 
-When your metrics shift — drop-off increases, churn spikes, a feature goes unused — the next step is usually qualitative. Talking to the right users at the right moment surfaces context that dashboards can't show.
+When metrics shift—onboarding drop-off, churn spikes, feature abandonment — teams often know *something* changed but struggle to understand the context behind it.
 
-This repository contains playbooks for investigating common product analytics signals such as onboarding drop-off, churn spikes, feature abandonment, and activation decline — using tools like PostHog workflows and short user interviews.
+These playbooks outline simple workflows for investigating those moments using product events and short user conversations.
 
 ---
 
 ## How it works
 
 ```
-PostHog event fires
-  → workflow triggers a message to the user
-    → user completes a short AI interview (2–3 min)
-      → AI summarizes insights across responses
+Typical workflow
+
+1. A product event fires (onboarding_abandoned, subscription_cancelled)
+2. A workflow sends the user a short interview request
+3. 5–10 responses reveal the context behind the metric change
+
 ```
 
 Each playbook maps a specific analytics signal to a trigger event, a workflow, and a set of interview questions.
@@ -72,8 +74,7 @@ Step-by-step walkthroughs with PostHog setup instructions:
 
 That's it. Most teams find a clear signal within the first few conversations.
 
-If you want to implement this approach, you can create an interview and trigger it from product events.
-
+Example implementation:
 https://usercall.co/research-triggers
 
 ---
