@@ -72,6 +72,10 @@ Step-by-step walkthroughs with PostHog setup instructions:
 
 That's it. Most teams find a clear signal within the first few conversations.
 
+If you want to implement this approach, you can create an interview and trigger it from product events.
+
+https://usercall.co/research-triggers
+
 ---
 
 ## Contributing
